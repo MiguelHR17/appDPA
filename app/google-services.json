@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "624616885",
+    "project_id": "hernandezdpa202502",
+    "storage_bucket": "hernandezdpa202502.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624616885:android:7f9d917adf84a014bea5fc",
+        "android_client_info": {
+          "package_name": "dev.miguelehr.appdpa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Obz0zxh-Pl7cObZ-ZxTocrQdOfPlnSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
