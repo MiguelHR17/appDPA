@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DrawerScaffold(navController: NavController, content: @Composable () -> Unit){
@@ -64,6 +65,15 @@ fun DrawerScaffold(navController: NavController, content: @Composable () -> Unit
                     selected = false,
                     onClick = {
                         navController.navigate("favorites")
+                        scope.launch { drawerState.close() }
+                    }
+                )
+
+                NavigationDrawerItem(
+                    label =  { Text("Api Football")},
+                    selected = false,
+                    onClick = {
+                        navController.navigate("football")
                         scope.launch { drawerState.close() }
                     }
                 )

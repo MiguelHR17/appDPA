@@ -5,16 +5,16 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dev.miguelehr.appdpa.presentation.apifootball.ApiFootballScreen
 import dev.miguelehr.appdpa.presentation.auth.LoginScreen
 import dev.miguelehr.appdpa.presentation.auth.RegisterScreen
 import dev.miguelehr.appdpa.presentation.home.HomeScreen
 import dev.miguelehr.appdpa.presentation.permissions.GalleryPermissionScreen
 
 @Composable
-fun AppNavGraph() {
+fun AppNavGraph(){
     val navController = rememberNavController()
-
-    NavHost(navController = navController, startDestination = "register")
+    NavHost(navController = navController, startDestination = "home")
     {
         composable("register") { RegisterScreen(navController) }
         composable("login") { LoginScreen(navController) }
@@ -24,14 +24,19 @@ fun AppNavGraph() {
                 HomeScreen()
             }
         }
-        composable("permissions") {
+        composable ("permissions") {
             DrawerScaffold(navController) {
                 GalleryPermissionScreen()
             }
         }
-        composable("favorites") {
+        composable ("favorites") {
             DrawerScaffold(navController) {
-                Text("Proximamente pantalla favoritos...")
+                Text("Proximamente pantalla favoritos.....")
+            }
+        }
+        composable ("football") {
+            DrawerScaffold(navController) {
+                ApiFootballScreen()
             }
         }
     }

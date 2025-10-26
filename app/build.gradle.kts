@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.auth)
+    implementation(libs.androidx.material3)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -61,6 +62,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
+    implementation("androidx.compose.material:material-icons-extended-android:1.6.8")
     //NavController
     implementation("androidx.navigation:navigation-compose:2.9.4")
     //Coil compose
@@ -68,4 +70,10 @@ dependencies {
 
     //Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+
+    //Retrofit
+    //implementation("com.squareup.retrofit2:retrofit:3.1.0-SNAPSHOT")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
 }
